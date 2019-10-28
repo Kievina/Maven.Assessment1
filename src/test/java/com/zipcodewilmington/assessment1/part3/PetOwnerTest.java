@@ -10,7 +10,7 @@ import java.util.List;
  * Created by leon on 2/16/18.
  */
 public class PetOwnerTest {
-    @Test
+    /*@Test
     public void constructorTest() {
         // Given
         String expectedName = "George";
@@ -174,5 +174,5 @@ public class PetOwnerTest {
         for(Pet pet : pets) {
             Assert.assertTrue(petList.contains(pet));
         }
-    }
+    }*/
 }

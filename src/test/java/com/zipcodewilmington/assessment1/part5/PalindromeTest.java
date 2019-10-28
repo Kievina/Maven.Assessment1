@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class PalindromeTest {
 
-    @Test
+  @Test
     public void solution0(){
         Palindrome palindrome = new Palindrome();
         Integer expected = palindrome.countPalindromes("aaa");
