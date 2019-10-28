@@ -1,5 +1,8 @@
 package com.zipcodewilmington.assessment1.part2;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -10,7 +13,12 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with evens removed
      */
     public Integer[] deleteEvens(Integer[] ints) {
-        return null;
+        ArrayList<Integer> noEvens = new ArrayList<>();
+        for(Integer number: ints) {
+            if(number % 2 != 0)
+                noEvens.add(number);
+        }
+        return noEvens.toArray(new Integer[noEvens.size()]);
     }
 
     /**
@@ -19,7 +27,12 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with odds removed
      */
     public Integer[] deleteOdds(Integer[] ints) {
-        return null;
+        ArrayList<Integer> noOdds = new ArrayList<>();
+        for(Integer number: ints) {
+            if(number % 2 == 0)
+                noOdds.add(number);
+        }
+        return noOdds.toArray(new Integer[noOdds.size()]);
     }
 
     /**
@@ -28,7 +41,12 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by 3 removed
      */
     public Integer[] deleteMultiplesOf3(Integer[] ints) {
-        return null;
+        ArrayList<Integer> noMultiplesOf3 = new ArrayList<>();
+        for(Integer number: ints) {
+            if(number % 3 != 0)
+                noMultiplesOf3.add(number);
+        }
+        return noMultiplesOf3.toArray(new Integer[noMultiplesOf3.size()]);
     }
 
     /**
@@ -38,6 +56,12 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by `multiple` removed
      */
     public Integer[] deleteMultiplesOfN(Integer[] ints, int multiple) {
-        return null;
+
+        ArrayList<Integer> noMultiplesOfN = new ArrayList<>();
+        for(Integer number: ints) {
+            if(number % multiple != 0)
+                noMultiplesOfN.add(number);
+        }
+        return noMultiplesOfN.toArray(new Integer[noMultiplesOfN.size()]);
     }
 }
