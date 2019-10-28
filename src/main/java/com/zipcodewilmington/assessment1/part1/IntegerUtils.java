@@ -11,7 +11,11 @@ public class IntegerUtils {
      * @return the sum of all integers between 0 and not including `n`
      */
     public static Integer getSumOfN(Integer n) {
-        return null;
+        Integer sumOfN = 0;
+        for (int i = 0; i <= n; i++) {
+            sumOfN = sumOfN + i;
+        }
+        return sumOfN;
     }
 
     /**
@@ -19,7 +23,11 @@ public class IntegerUtils {
      * @return the product of all integers between 0 and not including `n`
      */
     public static Integer getProductOfN(Integer n) {
-        return null;
+        Integer productOfN = 1;
+        for (int i = 1; i <= n; i++) {
+            productOfN = productOfN * i;
+        }
+        return productOfN;
     }
 
     /**
@@ -27,6 +35,12 @@ public class IntegerUtils {
      * @return integer with identical digits in the reverse order
      */
     public static Integer reverseDigits(Integer val) {
-        return null;
+        String valReversed = "";
+        String valStr = val.toString();
+        for (int i = valStr.length() - 1; i >= 0; i--) {
+            valReversed = valReversed + valStr.charAt(i);
+        }
+        Integer integer = Integer.valueOf(valReversed);
+        return integer;
     }
 }
