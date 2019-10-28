@@ -90,16 +90,15 @@ public class ArrayUtils {
      * @param objectArrayToAdd an array of Objects to add to the first argument
      * @return an array containing all elements in `objectArray` and `objectArrayToAdd`
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
-     */ // TODO
-    /*public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
-        ArrayList<Integer> newObjectList = new ArrayList<>(Arrays.asList(objectArray));
-        for(Object number: objectArray) {
-            newObjectList.add(number);
+     */
+    public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
+        ArrayList<Object> newObjectList = new ArrayList<>();
+        for (int i = 0; i < objectArray.length; i++) {
+            newObjectList.add(objectArray[i]);
         }
-        for(Object number: objectArrayToAdd) {
-            newObjectList.add(number);
+        for (int i = 0; i < objectArrayToAdd.length; i++) {
+            newObjectList.add(objectArrayToAdd[i]);
         }
-        return newObjectList.toArray(new Object[newObjectList.size()]);
-        //return null;
-    }*/
+        return newObjectList.toArray(new Integer[newObjectList.size()]);
+    }
 }
