@@ -28,14 +28,14 @@ public class ArrayUtils {
      * @return an array with identical content excluding the specified `objectToRemove`
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
-    public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-        ArrayList<Object> newObjectList = new ArrayList<>();
-        int sizeOfNewObjectArray = objectArray.length - getNumberOfOccurrences(objectArray, objectToRemove);
+    public static Integer[] removeValue(Integer[] objectArray, Integer objectToRemove) {
+        ArrayList<Integer> newObjectList = new ArrayList<>();
+        int sizeOfNewArray = objectArray.length - getNumberOfOccurrences(objectArray, objectToRemove);
         for (int i = 0; i < objectArray.length; i++) {
             if (!objectArray[i].equals(objectToRemove))
                 newObjectList.add(objectArray[i]);
         }
-        return newObjectList.toArray(new Integer[newObjectList.size()]);
+        return newObjectList.toArray(new Integer[sizeOfNewArray]);
     }
 
     /**

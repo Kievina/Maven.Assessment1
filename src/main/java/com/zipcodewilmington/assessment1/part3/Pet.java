@@ -76,6 +76,6 @@ public abstract class Pet implements Animal {
      * @return PetOwner object whose composite `pets` collection contains this Pet instance
      */
     public PetOwner getOwner() {
-        return owner;
+        return this.owner;
     }
 }
